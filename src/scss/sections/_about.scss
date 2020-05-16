@@ -1,0 +1,46 @@
+.about {
+	display: flex;
+	min-height: 124rem;
+	position: relative;
+
+	&--left {
+		display: none;
+		background: url("../img/bg-about-left.jpg") center (bottom/cover) no-repeat;
+		flex-basis: 50%;
+
+		@include respond(md) {
+			display: block;
+		}
+	}
+
+	&--right {
+		padding-top: 25rem;
+		background: url("../img/bg-about-right.jpg") center (bottom/cover) no-repeat;
+		flex-basis: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include respond(md) {
+			flex-basis: 50%;
+		}
+	}
+
+	&__heading {
+		margin-bottom: 4rem;
+	}
+
+	&__text {
+		width: 70%;
+		font-size: 1.6rem;
+		text-align: center;
+		color: #696969;
+		font-family: $ff-lato;
+		margin-bottom: 6.5rem;
+		line-height: 2.4rem;
+	}
+
+	&__btn-wrap > a {
+		margin-right: 2rem;
+	}
+}

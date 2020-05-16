@@ -1,0 +1,24 @@
+@import "abstract/variables";
+@import "abstract/mixins";
+
+@import "base/base";
+@import "base/typography";
+
+@import "blocks/btn";
+@import "blocks/slider";
+@import "blocks/carousel";
+@import "blocks/nav";
+@import "blocks/newsletter";
+@import "blocks/social";
+
+@import "sections/header";
+@import "sections/hero";
+@import "sections/about";
+@import "sections/featured";
+@import "sections/video";
+@import "sections/deals";
+@import "sections/testimonial";
+@import "sections/achievements";
+@import "sections/blog";
+@import "sections/map";
+@import "sections/footer";

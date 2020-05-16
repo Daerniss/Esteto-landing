@@ -1,0 +1,126 @@
+.slider {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+
+	&__active {
+		margin: 0 auto;
+
+		box-shadow: 0 0 2rem rgba(33, 33, 33, 0.1);
+
+		@include respond(md) {
+			max-width: 77rem;
+			min-height: 44rem;
+			display: flex;
+			// flex-basis: 40%;
+		}
+	}
+
+	&__head {
+		max-width: 100%;
+		min-height: 35vw;
+		background: url("../img/img-deal-2.jpg") bottom (center/cover) no-repeat;
+
+		@include respond(md) {
+			min-height: auto;
+			min-width: 37rem;
+		}
+	}
+
+	&__body {
+		padding: 3rem;
+	}
+
+	&__title {
+		font-size: 2.4rem;
+		line-height: 4rem;
+		margin-bottom: 2rem;
+	}
+
+	&__price {
+		display: block;
+		font-size: 2rem;
+		color: $color-secondary;
+		font-family: $ff-lato;
+		margin-bottom: 7rem;
+	}
+
+	&__date {
+		margin-bottom: 1.8rem;
+	}
+
+	&__date,
+	&__location {
+		display: block;
+		color: #696969;
+		font-family: $ff-lato;
+		font-size: 1.5rem;
+	}
+
+	ion-icon {
+		margin-right: 1rem;
+		color: $color-primary-light;
+	}
+
+	&__previous {
+		display: none;
+
+		@include respond(md) {
+			display: block;
+			width: 13%;
+			max-width: 25rem;
+			position: absolute;
+			top: 50%;
+			left: 1.5%;
+			transform: translateY(-50%);
+
+			img {
+				max-width: 100%;
+			}
+
+			span {
+				color: $color-primary;
+				font-size: 2.4rem;
+				font-weight: 700;
+				text-decoration: underline;
+				display: inline-block;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translate(-50%, -50%);
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__next {
+		display: none;
+
+		@include respond(md) {
+			display: block;
+			width: 13%;
+			max-width: 25rem;
+			position: absolute;
+			top: 50%;
+			right: 1.5%;
+			transform: translateY(-50%);
+
+			img {
+				max-width: 100%;
+			}
+
+			span {
+				color: $color-primary;
+				font-size: 2.4rem;
+				font-weight: 700;
+				text-decoration: underline;
+				display: inline-block;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translate(50%, -50%);
+				cursor: pointer;
+			}
+		}
+	}
+}

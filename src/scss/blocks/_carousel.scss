@@ -1,0 +1,73 @@
+.carousel {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+
+	&__body {
+		text-align: center;
+
+		@include respond(sm) {
+			max-width: 80%;
+			margin: 0 auto;
+		}
+	}
+
+	&__title {
+		color: #333333;
+		font-size: 2.4rem;
+		font-weight: 700;
+		margin-bottom: 3.4rem;
+	}
+
+	&__text {
+		color: #696969;
+		font-family: $ff-lato;
+		font-style: italic;
+		font-size: 1.8rem;
+		line-height: 3.2rem;
+		margin-bottom: 4.9rem;
+	}
+
+	&__stars {
+		margin-bottom: 2rem;
+
+		ion-icon {
+			color: $color-secondary-light;
+		}
+	}
+
+	&__author {
+		color: $color-primary;
+		font-size: 1.4rem;
+		font-weight: 400;
+
+		span {
+			font-weight: 700;
+			letter-spacing: 0.07rem;
+			text-transform: uppercase;
+			color: $color-primary-light;
+		}
+	}
+
+	&__right {
+		color: $color-secondary-light;
+	}
+
+	&__left,
+	&__right {
+		cursor: pointer;
+		display: none;
+		color: #a6afd1;
+		transition: color .3s;
+
+		&:hover {
+			color: $color-secondary-light;
+		}
+
+		@include respond(md) {
+			display: block;
+			font-size: 4rem;
+		}
+	}
+}

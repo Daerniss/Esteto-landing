@@ -1,0 +1,44 @@
+.testimonial {
+	position: relative;
+	padding: 14.7rem 0 13.7rem;
+	background-color: #f7f7f8;
+	overflow: hidden;
+
+	&::before {
+		position: absolute;
+		top: -3rem;
+		left: 3rem;
+		width: 11.5rem;
+		height: 9.3rem;
+		display: block;
+		content: '';
+		background: url('../img/icons/quote-mark-left.png') center (center/cover) no-repeat;
+		font-size: 50rem;
+		color: red;
+
+		@include respond(md) {
+			left: 12rem;
+			width: 16.5rem;
+			height: 14.3rem;
+		}
+	}
+
+	&::after {
+		position: absolute;
+		bottom: -3rem;
+		right: 3rem;
+		width: 11.5rem;
+		height: 9.3rem;
+		display: block;
+		content: '';
+		background: url('../img/icons/quote-mark-right.png') center (center/cover) no-repeat;
+		font-size: 50rem;
+		color: red;
+
+		@include respond(md) {
+			right: 12rem;
+			width: 16.5rem;
+			height: 14.3rem;
+		}
+	}
+}

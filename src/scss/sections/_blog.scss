@@ -1,0 +1,134 @@
+.blog {
+	&__heading {
+		margin-bottom: 8rem;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__item {
+		flex-basis: 70%;
+		box-shadow: 0 0 2rem rgba(33, 33, 33, 0.1);
+		margin: 0 auto;
+		margin-bottom: 5rem;
+
+		@include respond(sm) {
+			flex: 0 0 70%;
+		}
+
+		@include respond(md) {
+			flex: 0 0 35rem;
+		}
+
+		@include respond(lg) {
+			flex: 0 0 37rem;
+		}
+	}
+
+	&__head {
+		max-width: 100%;
+		position: relative;
+
+		&:hover .overlay {
+			bottom: 0;
+			height: 100%;
+		}
+
+		img {
+			width: 100%;
+			display: block;
+		}
+
+		.overlay {
+			position: absolute;
+			bottom: 100%;
+			left: 0;
+			right: 0;
+			background: rgba($color-primary-light, .6);
+			overflow: hidden;
+			width: 100%;
+			height: 0;
+			transition: .5s ease;
+		}
+
+		a {
+			width: 5.5rem;
+			height: 5.5rem;
+			background-color: $color-secondary;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			ion-icon {
+				color: $color-white;
+				font-size: 2rem;
+			}
+		}
+	}
+
+	&__body {
+		padding: 3rem 2.5rem 4rem;
+		text-align: center;
+
+		border-bottom: 1px solid #eee;
+	}
+
+	&__subtitle {
+		color: $color-primary-light;
+		font-size: 1.7rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 0.12rem;
+		margin-bottom: 1.8rem;
+
+		@include respond(md) {
+			font-size: 1.2rem;
+		}
+	}
+
+	&__title {
+		font-size: 1.9rem;
+		margin-bottom: 3rem;
+	}
+
+	&__text {
+		color: #696969;
+		font-family: $ff-lato;
+		line-height: 2.4rem;
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+		padding: 1.5rem 5rem;
+	}
+
+	&__date,
+	&__comments,
+	&__likes {
+		color: #696969;
+		font-family: $ff-lato;
+	}
+
+	&__date {
+		margin-right: auto;
+	}
+
+	&__comments {
+		margin-right: 3rem;
+	}
+
+	ion-icon {
+		font-size: 1.6rem;
+		color: $color-secondary-light;
+		vertical-align: bottom;
+	}
+}

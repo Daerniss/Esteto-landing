@@ -1,0 +1,27 @@
+.footer {
+	padding: 7rem 0 3rem;
+	text-align: center;
+
+	&__container {
+		margin-bottom: 8rem;
+
+		@include respond(md) {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+		}
+	}
+
+	&__logo {
+		display: inline-block;
+		margin-bottom: 4rem;
+	}
+
+	&__social {
+		margin-bottom: 3rem;
+	}
+
+	nav {
+		margin-bottom: 3rem;
+	}
+}

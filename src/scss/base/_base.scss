@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+html {
+	font-size: 37.5%;
+
+	@include respond(sm) {
+		font-size: 50%;
+	}
+
+	@include respond(md) {
+		font-size: 56.25%;
+	}
+
+	@include respond(lg) {
+		font-size: 62.5%;
+	}
+}
+
+body {
+	box-sizing: border-box;
+	line-height: 1;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	max-width: 117rem;
+	margin: 0 auto;
+	padding: 0 2rem;
+
+	@include respond(lg) {
+		padding: 0;
+	}
+
+	&--fluid {
+		max-width: 172rem;
+	}
+}
+
+.main {
+	margin-top: -20vh;
+
+	@include respond(md) {
+		margin-top: -23vh;
+	}
+}

@@ -1,0 +1,25 @@
+.nav {
+	display: flex;
+	justify-content: center;
+	&__item {
+		&:not(:last-child) {
+			margin-right: 2rem;
+
+			@include respond(md) {
+				margin-right: 4.5rem;
+			}
+		}
+	}
+
+	&__link {
+		color: $color-primary;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.14rem;
+		transition: all .3s;
+
+		&:hover {
+			color: $color-primary-light;
+		}
+	}
+}

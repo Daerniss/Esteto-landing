@@ -1,0 +1,69 @@
+.video {
+	padding: 11.8rem 0 8.6rem;
+	background: url("../img/bg-video.jpg") bottom/cover no-repeat;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+
+		@include respond(md) {
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+
+	&--left {
+		position: relative;
+
+		@include respond(md) {
+			height: 100%;
+		}
+
+		img {
+			width: 100%;
+
+			@include respond(md) {
+				width: auto;
+			}
+		}
+
+		a {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 5.6rem;
+			height: 5.6rem;
+			border-radius: 50%;
+			background-color: $color-primary-light;
+
+			ion-icon {
+				color: $color-white;
+			}
+		}
+	}
+
+	&--right {
+		@include respond(md) {
+			transform: translateY(-2.5rem);
+		}
+	}
+
+	&__title {
+		color: $color-white;
+		font-size: 4.8rem;
+		font-weight: 700;
+		margin-bottom: 3.2rem;
+	}
+
+	&__text {
+		color: $color-white;
+		font-family: $ff-lato;
+		font-weight: 400;
+		line-height: 2.4rem;
+		margin-bottom: 5.2rem;
+	}
+}

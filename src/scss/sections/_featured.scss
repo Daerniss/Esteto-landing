@@ -1,0 +1,116 @@
+.featured {
+	padding: 14rem 0 12rem;
+
+	&__list {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@include respond(md) {
+			justify-content: space-evenly;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+		box-shadow: 0 0 2rem rgba(33, 33, 33, 0.1);
+		margin-bottom: 3rem;
+
+		@include respond(sm) {
+			flex-basis: 45%;
+		}
+
+		@include respond(md) {
+			flex-basis: 37rem;
+		}
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__description {
+		padding: 3rem 7.7rem 4rem 3rem;
+		position: relative;
+	}
+
+	&__location {
+		color: $color-primary-light;
+		font-size: 1.7rem;
+		font-weight: 300;
+		letter-spacing: 0.06rem;
+		text-transform: uppercase;
+
+		margin-bottom: 2.3rem;
+
+		@include respond(md) {
+			font-size: 1.2rem;
+		}
+	}
+
+	&__type {
+		color: $color-primary;
+		font-size: 2.3rem;
+		font-weight: 500;
+
+		margin-bottom: 2.3rem;
+
+		@include respond(md) {
+			font-size: 1.8rem;
+			margin-bottom: 1.7rem;
+		}
+	}
+
+	&__price-box {
+		font-family: $ff-lato;
+
+		ion-icon {
+			margin-right: 0.9rem;
+		}
+	}
+
+	&__price {
+		color: $color-secondary;
+		font-size: 2rem;
+		margin-right: 6rem;
+
+		@include respond(md) {
+			font-size: 1.5rem;
+		}
+	}
+
+	&__date {
+		color: #696969;
+		font-size: 2rem;
+
+		@include respond(md) {
+			font-size: 1.5rem;
+		}
+	}
+
+	&__heading {
+		margin-bottom: 7rem;
+	}
+
+	a {
+		position: absolute;
+		transform: translateY(-50%);
+		top: 0;
+		right: 3rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		width: 5.6rem;
+		height: 5.6rem;
+		background-color: $color-primary-light;
+
+		ion-icon {
+			color: $color-white;
+			font-size: 2.3rem;
+		}
+	}
+}

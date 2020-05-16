@@ -1,0 +1,31 @@
+.newsletter {
+	display: inline-block;
+	position: relative;
+	max-width: 34rem;
+
+	input {
+		max-width: 35rem;
+		padding: 1.8rem 0 1.8rem 2.8rem;
+		border: 0.1rem solid #eff0f2;
+		border-radius: 50rem;
+	}
+
+	button {
+		position: absolute;
+		top: 50%;
+		right: 2%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+		border: none;
+		transform: translateY(-50%);
+		background-color: $color-secondary-light;
+
+		ion-icon {
+			color: $color-white;
+		}
+	}
+}

@@ -1,0 +1,97 @@
+.hero {
+	padding-top: .1rem;
+	background: linear-gradient(
+			to right,
+			rgba($color-white, .8) 0%,
+			rgba($color-white, .8) 50%,
+			transparent 50%
+		),
+		url(../img/123.jpg) center (bottom/cover) no-repeat;
+	min-height: 100vh;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);
+	position: relative;
+	z-index: 1;
+
+	&__container {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&__watch {
+		display: flex;
+		align-items: center;
+	}
+	&__icon {
+		font-size: 6.4rem;
+		color: $color-primary;
+		margin-right: 1rem;
+	}
+
+	&__subtitle {
+		opacity: .8;
+		font-size: 1.4rem;
+		font-weight: 400;
+	}
+
+	&__link {
+		font-size: 1.8rem;
+		font-weight: 700;
+		color: $color-primary;
+		display: inline-block;
+		border-bottom: 1px solid currentColor;
+		padding-bottom: .4rem;
+
+		text-transform: uppercase;
+	}
+
+	&__heading {
+		margin-bottom: 13rem;
+		max-width: 80rem;
+	}
+
+	&__social {
+		display: none;
+
+		@include respond(md) {
+			display: flex;
+			position: absolute;
+			top: 60%;
+			right: 15%;
+			flex-direction: column;
+			transform: translateY(-50%);
+
+			&::before {
+				content: '';
+				position: relative;
+				border-bottom: 1px solid rgba($color-primary, .5);
+				height: 1px;
+				width: 6rem;
+				transform: rotate(90deg) translate(-80%, 2rem);
+			}
+
+			&::after {
+				content: 'FOLLOW US';
+				position: relative;
+				color: $color-primary;
+				font-weight: 700;
+				transform: rotate(-90deg) translate(380%, -3.5rem);
+			}
+		}
+	}
+
+	.social__item {
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	.social__link {
+		color: $color-primary;
+
+		&:hover {
+			color: $color-secondary-light;
+		}
+	}
+}
